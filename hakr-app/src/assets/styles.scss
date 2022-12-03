@@ -1,0 +1,23 @@
+@tailwind base; /* Preflight will be injected here */
+@tailwind components;
+@tailwind utilities;
+@import "./variables";
+@import "./buttons";
+@import "./card";
+@import "./modal";
+@import "./typography";
+
+body {
+  padding: 0 10px;
+  @media only screen and (min-width: theme('screens.lg')) {
+    padding: 0 20px;
+  }
+}
+
+.animatePlus {
+  transition: 1s;
+}
+
+.animateMin {
+  transition: 1s;
+}
