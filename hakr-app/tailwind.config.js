@@ -14,6 +14,8 @@ module.exports = {
       "gray-dark": "#273444",
       gray: "#8492a6",
       "gray-light": "#d3dce6",
+      // custom classes
+      muted: "#8492a6",
     },
     screens: {
       sm: "640px", // => @media (min-width: 640px) { ... }
@@ -41,6 +43,7 @@ module.exports = {
         "gradient-outside": "var(--gradient-outside-color)",
         "gradient-inside": "var(--gradient-inside--color)",
         "soft-background": "var(--soft-background-color)",
+        "muted-color": "var(--muted-color)",
       },
       spacing: {
         "8xl": "96rem",

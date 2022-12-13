@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import CardBlock from "@/prototypes/CardBlock.vue";
+import CardProto from "@/prototypes/CardProto.vue";
 const heading = "Card example";
 const text = "Lorem ipsum card component dolor";
 </script>
 <template>
-  <CardBlock :cardClass="''">
+  <CardProto :cardClass="''">
     <h2>{{ heading }}</h2>
     <p>{{ text }}</p>
-  </CardBlock>
+  </CardProto>
 </template>

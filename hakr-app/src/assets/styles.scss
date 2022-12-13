@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import "./variables";
+@import "./animation";
 @import "./buttons";
 @import "./card";
 @import "./modal";
@@ -12,12 +13,4 @@ body {
   @media only screen and (min-width: theme('screens.lg')) {
     padding: 0 20px;
   }
-}
-
-.animatePlus {
-  transition: 1s;
-}
-
-.animateMin {
-  transition: 1s;
 }

@@ -1,66 +1,61 @@
-<script lang="ts">
-import { defineComponent } from "vue";
-import ModalBlock from '@/prototypes/ModalBlock.vue'
-import AboutMe from "@/components/AboutMe.vue"; // @ is an alias to /src
-import ButtonCounter from "@/components/ButtonCounter.vue"; // @ is an alias to /src
-import StatusSuccess from "@/components/StatusSuccess.vue"; // @ is an alias to /src
-import StatusWarning from "@/components/StatusWarning.vue"; // @ is an alias to /src
-import SingleCard from "@/components/SingleCard.vue"; // @ is an alias to /src
+<script setup>
+  import AboutMe from "@/components/AboutMe.vue";
+  import ButtonCounter from "@/components/ButtonCounter.vue";
+  import BooksCounter from "@/components/BooksCounter.vue";
+  import HorizontalRuler from "@/components/HorizontalRuler.vue";
+  import SingleCard from "@/components/SingleCard.vue";
+  import StatusSuccess from '@/components/StatusSuccess.vue';
+  import StatusWarning from '@/components/StatusWarning.vue';
+  import ModalProto from "@/prototypes/ModalProto.vue"
+  import { ref } from 'vue';
 
-export default defineComponent({
-  name: "HomeView",
-  components: {
-    AboutMe,
-    ButtonCounter,
-    ModalBlock,
-    StatusSuccess,
-    StatusWarning,
-    SingleCard,
-  },
-  data() {
-    return {
-      showModal: false
-    }
-  },
-  methods: {
-    setModal(){
-      return this.showModal = true;
-    }
+  const modal = ref(false);
+  function openModal(){
+    modal.value = true;
+    console.log('Home page modal = ' + modal.value )
   }
-});
+  function closeModal(){
+    modal.value  = false;
+    console.log('Home page modal = ' + modal.value )
+  }
 </script>
 <template>
-  <div class="container mx-auto flex justify-center">
+  <div class="container md:w-2/3 xl:w-1/2 max-w-2xl mx-auto flex justify-center">
     <StatusWarning></StatusWarning>
   </div>
-  <div class="container mx-auto flex justify-center">
+  <div class="container md:w-2/3 xl:w-1/2 max-w-2xl mx-auto flex justify-center">
     <StatusSuccess></StatusSuccess>
   </div>
-  <div
-    class="container h-screen bg-white"
-  >
-    <div class="w-1/2 mx-auto text-center">
-      <h1><AboutMe></AboutMe></h1>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
-      <SingleCard></SingleCard>
-      <SingleCard></SingleCard>
-      <SingleCard></SingleCard>
-    </div>
-    <hr class="mb-10 text-gray-200">
-    <div class="mx-auto text-center mb-2">
-      <ButtonCounter></ButtonCounter>
-      <a href="#" id="show-modal" class="underline underline-offset-2 inline-block mt-2" @click.prevent="setModal()">About this counter</a>
+  <div class="container bg-white mb-10">
+    <div class="mx-auto text-center">
+      <AboutMe></AboutMe>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+        <SingleCard></SingleCard>
+        <SingleCard></SingleCard>
+        <SingleCard></SingleCard>
+      </div>
+      <HorizontalRuler></HorizontalRuler>
+      <div class="mx-auto text-center mb-8">
+        <ButtonCounter></ButtonCounter>
+        <a href="#" class="underline underline-offset-2 inline-block mt-2" @click="openModal">About this counter</a>
+      </div>
+      <HorizontalRuler></HorizontalRuler>
+      <div class="mx-auto text-center mb-8">
+        <BooksCounter></BooksCounter>
+      </div>
     </div>
   </div>
+
   <Teleport to="body">
-    <ModalBlock :show="showModal" @close="showModal = false">
+    <ModalProto :show="modal" @close="closeModal">
       <template #header>
         <h1 class="mb-4">Information</h1>
       </template>
       <template #body>
         <p>It's a counter.</p>
       </template>
-    </ModalBlock>
+      <template #footer>
+      </template>
+    </ModalProto>
   </Teleport>
 </template>

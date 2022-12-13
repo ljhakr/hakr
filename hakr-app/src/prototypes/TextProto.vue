@@ -8,7 +8,7 @@ export default defineComponent({
 });
 </script>
 <template>
-  <span :class="textClass">
+  <div :class="textClass">
     <slot></slot>
-  </span>
+  </div>
 </template>

@@ -10,7 +10,7 @@ export default defineComponent({
 <template>
   <div
     :class="statusClass"
-    class="w-full lg:w-2/3 xl:w-1/2 text-center border-2 rounded-sm p-2"
+    class="w-full text-center border-2 rounded-sm p-2"
   >
     <p><slot>Generic fallback status message.</slot></p>
   </div>
