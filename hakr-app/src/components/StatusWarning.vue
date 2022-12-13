@@ -1,11 +1,15 @@
 <script setup lang="ts">
-import StatusProto from "@/prototypes/StatusProto.vue";
-const text =
-  "Generic warning message.";
+import StatusMessage from "@/prototypes/StatusMessage.vue";
+
+import {defineProps} from 'vue';
+
+const props = defineProps({
+  textWarning: { type: String, required: false, default: "This is a generic warning message!" },
+});
+
 </script>
 <template>
-  <StatusProto :statusClass="'mb-3 border-danger-color text-danger-color'">
-    <!--{{ "text" variable commented out to trigger fallback message }}-->
-    <!--{{ text }}-->
-  </StatusProto>
+  <StatusMessage :statusClass="'mb-3 border-danger-color text-danger-color'">
+    {{ props.textWarning }}
+  </StatusMessage>
 </template>

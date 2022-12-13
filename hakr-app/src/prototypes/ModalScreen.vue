@@ -9,20 +9,20 @@ const emits = defineEmits(['close']);
 
 function value (){
   // On btn click the value will be true
-  console.log('ModalProto modal value ' + props.show)
+  console.log('ModalScreen modal value ' + props.show)
 }
 if (props.show) {
-  console.log("ModalProto modal TRUE : true")
+  console.log("ModalScreen modal TRUE : true")
 } else {
   // On btn click the value will be true
-  console.log("ModalProto modal FALSE: false")
+  console.log("ModalScreen modal FALSE: false")
 }
 watch(props, async () => {
   if (props.show) {
     // On btn click the value will be false
-    console.log('ModalProto modal watch props TRUE ' + props.show)
+    console.log('ModaModalScreenlProto modal watch props TRUE ' + props.show)
   } else {
-    console.log('ModalProto modal watch props FALSE ' + props.show)
+    console.log('ModalScreen modal watch props FALSE ' + props.show)
   }
 });
 </script>

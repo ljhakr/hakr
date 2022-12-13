@@ -1,10 +1,15 @@
 <script setup lang="ts">
-import StatusProto from "@/prototypes/StatusProto.vue";
-const text = " This is a success message!";
+import StatusMessage from "@/prototypes/StatusMessage.vue";
+
+import {defineProps} from 'vue';
+
+const props = defineProps({
+  textSuccess: { type: String, required: false, default: "This is a generic success message!" },
+});
+
 </script>
 <template>
-  <StatusProto :statusClass="'mb-10 border-green-700 text-green-700'">
-    <!--{{ "text" variable commented out to trigger fallback message }}-->
-    {{ text }}
-  </StatusProto>
+  <StatusMessage :statusClass="'mb-10 border-green-700 text-green-700'">
+    {{ props.textSuccess }}
+  </StatusMessage>
 </template>

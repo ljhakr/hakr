@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import ButtonProto from "@/prototypes/ButtonProto.vue";
+import SingleButton from "@/prototypes/SingleButton.vue";
 
 const MIN_BOOKS = 0;
 const MAX_BOOKS = 5;
@@ -39,8 +39,8 @@ function animateCircleMin() {
     {{ count }}
   </div>
   <div class="sm:flex justify-center sm:gap-4">
-    <ButtonProto :disabled="count === MAX_BOOKS" @click="add(); animateCirclePlus()" :class="'w-full sm:w-auto mb-3 sm:mb-0 bg-blue-900'">Increase count</ButtonProto>
-    <ButtonProto :disabled="count === MIN_BOOKS" @click="subtract(); animateCircleMin()"
-                 :class="'transition ease-in-out delay-150 duration-500 w-full sm:w-auto bg-red-900'">Decrease count</ButtonProto>
+    <SingleButton :disabled="count === MAX_BOOKS" @click="add(); animateCirclePlus()" :class="'w-full sm:w-auto mb-3 sm:mb-0 bg-blue-900'">Increase count</SingleButton>
+    <SingleButton :disabled="count === MIN_BOOKS" @click="subtract(); animateCircleMin()"
+                 :class="'transition ease-in-out delay-150 duration-500 w-full sm:w-auto bg-red-900'">Decrease count</SingleButton>
   </div>
 </template>
