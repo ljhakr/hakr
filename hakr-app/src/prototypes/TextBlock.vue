@@ -1,14 +1,12 @@
-<script lang="ts">
-import { defineComponent } from "vue";
+<script setup lang="ts">
+import { defineProps } from "vue";
 
-export default defineComponent({
-  props: {
-    textClass: { type: String, required: false, default: "container" },
-  },
+const props = defineProps( {
+  textClass: { type: String, required: false, default: "container" },
 });
 </script>
 <template>
-  <div :class="textClass">
+  <div :class="props.textClass.value">
     <slot></slot>
   </div>
 </template>

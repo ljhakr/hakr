@@ -1,5 +1,5 @@
 <script setup>
-  import AboutMe from "@/components/AboutMe.vue";
+  import PageHeading from "@/components/PageHeading.vue";
   import ButtonCounter from "@/components/ButtonCounter.vue";
   import BooksCounter from "@/components/BooksCounter.vue";
   import HorizontalRuler from "@/components/HorizontalRuler.vue";
@@ -30,7 +30,7 @@
 
   <div class="container bg-white mb-10">
     <div class="mx-auto text-center">
-      <AboutMe></AboutMe>
+      <PageHeading></PageHeading>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
         <EventCard></EventCard>
         <EventCard></EventCard>

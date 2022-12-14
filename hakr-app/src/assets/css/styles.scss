@@ -1,12 +1,12 @@
 @tailwind base; /* Preflight will be injected here */
 @tailwind components;
 @tailwind utilities;
-@import "./variables";
-@import "./animation";
-@import "./buttons";
-@import "./card";
-@import "./modal";
-@import "./typography";
+@import "variables";
+@import "animation";
+@import "buttons";
+@import "card";
+@import "modal";
+@import "typography";
 
 body {
   padding: 0 10px;

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import TextBlock from "@/prototypes/TextBlock.vue";
+
 const title = "VUE app with Tailwind";
 const text = "Sub header";
 </script>

@@ -5,7 +5,7 @@ import SingleButton from "@/prototypes/SingleButton.vue";
 const MIN_BOOKS = 0;
 const MAX_BOOKS = 5;
 const animatePlus = ref(false);
-let animateMin = ref(false);
+const animateMin = ref(false);
 const count = ref(0);
 function add() {
   count.value++;
