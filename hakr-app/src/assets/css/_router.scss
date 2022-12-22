@@ -1,0 +1,9 @@
+.kre-router-enter-active,
+.kre-router-leave-active {
+  transition: opacity .3s ease-in-out;
+}
+
+.kre-router-enter-from,
+.kre-router-leave-to {
+  opacity: 0;
+}

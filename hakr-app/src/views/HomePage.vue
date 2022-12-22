@@ -1,49 +1,72 @@
 <script setup>
-  import PageHeading from "@/components/PageHeading.vue";
-  import ButtonCounter from "@/components/ButtonCounter.vue";
-  import BooksCounter from "@/components/BooksCounter.vue";
-  import HorizontalRuler from "@/components/HorizontalRuler.vue";
-  import EventCard from "@/components/EventCard.vue";
-  import StatusSuccess from '@/components/StatusSuccess.vue';
-  import StatusWarning from '@/components/StatusWarning.vue';
-  import ModalScreen from "@/prototypes/ModalScreen.vue"
-  import { ref } from 'vue';
+import PageHeading from '@/components/PageHeading.vue';
+import ButtonCounter from '@/components/ButtonCounter.vue';
+import BooksCounter from '@/components/BooksCounter.vue';
+import HorizontalRuler from '@/components/HorizontalRuler.vue';
+import EventCard from '@/components/EventCard.vue';
+import NoticeMessage from '@/components/NoticeMessage.vue';
+import ToastMessage from '@/components/ToastMessage.vue';
+import ModalScreen from '@/prototypes/ModalScreen.vue';
+import {ref} from 'vue';
 
-  const modal = ref(false);
-  function openModal(){
-    modal.value = true;
-    console.log('Home page modal = ' + modal.value )
-  }
-  function closeModal(){
-    modal.value  = false;
-    console.log('Home page modal = ' + modal.value )
-  }
+const modal = ref(false);
+const toast = ref('');
+
+function openModal() {
+  modal.value = true;
+}
+
+function closeModal() {
+  modal.value = false;
+}
+
+function openToast(e) {
+  toast.value = e;
+}
+
+function closeToast() {
+  toast.value = '';
+}
 </script>
 <template>
-
-  <div class="container md:w-2/3 xl:w-1/2 max-w-2xl mx-auto flex justify-center">
-    <StatusWarning></StatusWarning>
+  <div class="mb-3 container md:w-2/3 xl:w-1/2 max-w-2xl mx-auto flex justify-center">
+    <NoticeMessage :noticeType="'warning'"></NoticeMessage>
   </div>
-  <div class="container md:w-2/3 xl:w-1/2 max-w-2xl mx-auto flex justify-center">
-    <StatusSuccess :textSuccess="'Success!'"></StatusSuccess>
+  <div class="mb-10 container md:w-2/3 xl:w-1/2 max-w-2xl mx-auto flex justify-center">
+    <NoticeMessage :noticeType="'success'">Success!</NoticeMessage>
   </div>
 
   <div class="container bg-white mb-10">
     <div class="mx-auto text-center">
-      <PageHeading></PageHeading>
+      <PageHeading :title="'VUE app with Tailwind'" :subTitle="'Looking good.'"></PageHeading>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
         <EventCard></EventCard>
         <EventCard></EventCard>
         <EventCard></EventCard>
       </div>
-      <HorizontalRuler></HorizontalRuler>
-      <div class="mx-auto text-center mb-8">
-        <ButtonCounter></ButtonCounter>
-        <a href="#" class="underline underline-offset-2 inline-block mt-2" @click="openModal">About this counter</a>
+      <HorizontalRuler/>
+
+      <div class="relative mx-auto text-center mb-8">
+        <transition name="kre-toast">
+          <ToastMessage :show="toast" @close="closeToast"></ToastMessage>
+        </transition>
+        <div class="flex justify-center">
+          <a href="#" class="relative underline underline-offset-2 inline-block" @click="openToast('success')">Success message</a>
+          <a href="#" class="sm:border-l-2 border-blue-300 pl-2 ml-2 relative underline underline-offset-2 inline-block" @click="openToast('danger')">Danger message</a>
+          <a href="#" class="sm:border-l-2 border-blue-300 pl-2 ml-2 relative underline underline-offset-2 inline-block" @click="openToast('warning')">Warning message</a>
+        </div>
       </div>
+
       <HorizontalRuler></HorizontalRuler>
-      <div class="mx-auto text-center mb-8">
-        <BooksCounter></BooksCounter>
+      <div class="columns-1 lg:columns-2 gap-14 lg:flex items-end">
+        <div class="grid w-full text-center mb-8">
+          <ButtonCounter></ButtonCounter>
+          <a href="#" class="underline underline-offset-2 inline-block mt-2" @click="openModal">About this counter</a>
+        </div>
+        <HorizontalRuler :class="'lg:hidden'"></HorizontalRuler>
+        <div class="w-full text-center mb-8">
+          <BooksCounter></BooksCounter>
+        </div>
       </div>
     </div>
   </div>

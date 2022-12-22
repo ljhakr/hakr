@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import "flowbite/dist/flowbite.js";
 import "@/assets/css/styles.scss";
 </script>
 <template>
@@ -11,5 +12,7 @@ import "@/assets/css/styles.scss";
       <router-link to="/about">About</router-link>
     </nav>
   </div>
-  <router-view />
+  <transition name="kre-router">
+    <router-view />
+  </transition>
 </template>

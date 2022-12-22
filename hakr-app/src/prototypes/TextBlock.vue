@@ -2,11 +2,11 @@
 import { defineProps } from "vue";
 
 const props = defineProps( {
-  textClass: { type: String, required: false, default: "container" },
+  textClass: { type: String, required: false },
 });
 </script>
 <template>
-  <div :class="props.textClass.value">
+  <div :class="props.textClass">
     <slot></slot>
   </div>
 </template>

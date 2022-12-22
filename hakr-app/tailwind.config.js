@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js,vue}"],
+  content: [
+    './src/**/*.{html,js,vue}',
+    './node_modules/flowbite/**/*.js',
+  ],
   theme: {
     colors: {
       white: "#fff",
@@ -58,7 +61,9 @@ module.exports = {
     container: true
   },
   plugins: [
-    function ({ addComponents }) {
+    require('flowbite/plugin'),
+
+    function({addComponents}) {
       addComponents({
         '.container': {
           maxWidth: '100%',
