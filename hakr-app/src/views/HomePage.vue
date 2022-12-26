@@ -5,9 +5,19 @@ import BooksCounter from '@/components/BooksCounter.vue';
 import HorizontalRuler from '@/components/HorizontalRuler.vue';
 import EventCard from '@/components/EventCard.vue';
 import NoticeMessage from '@/components/NoticeMessage.vue';
+import ThemeToggle from '@/components/ThemeToggle.vue';
 import ToastMessage from '@/components/ToastMessage.vue';
 import ModalScreen from '@/prototypes/ModalScreen.vue';
 import {ref} from 'vue';
+
+const isDarkTheme = ref(false);
+// let rootElement = document.documentElement;
+
+function toggleTheme() {
+  // rootElement.classList.toggle('dark');
+  document.querySelector('[data-toast]').classList.toggle('dark');
+  isDarkTheme.value = !isDarkTheme.value;
+}
 
 const modal = ref(false);
 const toast = ref('');
@@ -44,20 +54,23 @@ function closeToast() {
         <EventCard></EventCard>
         <EventCard></EventCard>
       </div>
-      <HorizontalRuler/>
+      <HorizontalRuler :class="''"/>
 
-      <div class="relative mx-auto text-center mb-8">
+      <div data-toast>
+      <div class="rounded-xl relative mx-auto text-center py-8 bg-white dark:bg-blue-900">
         <transition name="kre-toast">
           <ToastMessage :show="toast" @close="closeToast"></ToastMessage>
         </transition>
         <div class="flex justify-center">
-          <a href="#" class="relative underline underline-offset-2 inline-block" @click="openToast('success')">Success message</a>
-          <a href="#" class="sm:border-l-2 border-blue-300 pl-2 ml-2 relative underline underline-offset-2 inline-block" @click="openToast('danger')">Danger message</a>
-          <a href="#" class="sm:border-l-2 border-blue-300 pl-2 ml-2 relative underline underline-offset-2 inline-block" @click="openToast('warning')">Warning message</a>
+          <a href="#" class="relative underline underline-offset-2 inline-block text-blue-900 dark:text-white" @click="openToast('success')">Success message</a>
+          <a href="#" class="sm:border-l-2 border-blue-300 pl-2 ml-2 relative underline underline-offset-2 inline-block text-blue-900 dark:text-white" @click="openToast('danger')">Danger message</a>
+          <a href="#" class="sm:border-l-2 border-blue-300 pl-2 ml-2 relative underline underline-offset-2 inline-block text-blue-900 dark:text-white" @click="openToast('warning')">Warning message</a>
+          <ThemeToggle :isDarkTheme="isDarkTheme" @toggleDarkTheme="toggleTheme"></ThemeToggle>
         </div>
       </div>
+      </div>
 
-      <HorizontalRuler></HorizontalRuler>
+      <HorizontalRuler/>
       <div class="columns-1 lg:columns-2 gap-14 lg:flex items-end">
         <div class="grid w-full text-center mb-8">
           <ButtonCounter></ButtonCounter>

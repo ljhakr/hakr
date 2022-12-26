@@ -1,10 +1,10 @@
 <script setup lang="ts">
   import { defineProps } from 'vue';
   const props = defineProps({
-    class: {type: String}
+    class: {type: String, default:'mb-8'}
   });
 </script>
 
 <template>
-  <hr :class="props.class" class="mb-8 text-gray-200">
+  <hr :class="props.class" class="text-gray-200">
 </template>

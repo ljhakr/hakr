@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './src/**/*.{html,js,vue}',
     './node_modules/flowbite/**/*.js',
@@ -13,6 +14,8 @@ module.exports = {
       pink: "#ff49db",
       orange: "#ff7849",
       green: "#13ce66",
+      sky: "#1fb6ff",
+      cyan: "#1fb6ff",
       yellow: "#ffc82c",
       "gray-dark": "#273444",
       gray: "#8492a6",

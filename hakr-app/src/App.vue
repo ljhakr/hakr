@@ -1,18 +1,18 @@
-<script setup lang="ts">
-import "flowbite/dist/flowbite.js";
-import "@/assets/css/styles.scss";
+<script setup>
+import 'flowbite/dist/flowbite';
+import '@/assets/css/styles.scss';
+
 </script>
 <template>
-  <div
-    class="container mx-auto text-center bg-gradient-to-r from-gradient-outside via-gradient-inside to-gradient-outside rounded-b-lg"
-  >
-    <nav class="mx-auto mb-10">
+  <div class="container mx-auto text-center bg-gradient-to-r from-gradient-outside via-gradient-inside
+  to-gradient-outside rounded-b-lg">
+    <nav class="relative mx-auto mb-10">
       <router-link to="/">Home</router-link>
       |
       <router-link to="/about">About</router-link>
     </nav>
   </div>
   <transition name="kre-router">
-    <router-view />
+    <router-view/>
   </transition>
 </template>
