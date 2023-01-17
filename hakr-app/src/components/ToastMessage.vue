@@ -1,15 +1,19 @@
 <script setup lang="ts">
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import {defineEmits, defineProps} from 'vue';
+import { defineEmits, withDefaults, defineProps } from 'vue';
 
-const props = defineProps({
-  show: {type: String, default: ''},
-});
+export interface Props {
+  show?: string
+}
+const props = withDefaults(defineProps<Props>(), {
+  show: '/about',
+})
+
 const emits = defineEmits(['close']);
 </script>
 <template>
   <div v-if="props.show === 'success'" id="toast-success"
-       class="kre-toast absolute -top-4 flex items-center p-4 mb-2 w-full max-w-xs bg-white rounded-lg drop-shadow-lg shadow-red text-gray-800 dark:text-gray-300 dark:bg-gray-800"
+       class="kre-toast absolute bottom-16 -top-20 flex items-center p-4 mb-2 w-full max-w-xs bg-white rounded-lg drop-shadow-lg shadow-red text-gray-800 dark:text-gray-300 dark:bg-gray-800"
        role="alert">
     <div class="inline-flex flex-shrink-0 justify-center items-center w-8 h-8 text-green-500 rounded-lg XSdark:bg-green-800 Xdark:text-green-200">
       <svg aria-hidden="true" class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20"

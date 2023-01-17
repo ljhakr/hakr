@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import {defineProps} from 'vue';
 
-const props = defineProps({
-  noticeType: {type: String, required: false, default: 'default'},
-});
+// Assign props to const if you need it within the script tag.
+const props = defineProps<{
+  noticeType?: string; default?: 'default'
+}>();
+
 let noticeClass = '';
 
 if (props.noticeType === 'default') {

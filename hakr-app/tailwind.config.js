@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   darkMode: 'class',
   content: [
@@ -10,7 +11,7 @@ module.exports = {
       white: "#fff",
       body: "#0ff",
       blue: "#1fb6ff",
-      purple: "#7e5bef",
+      purple: "#9375f3",
       pink: "#ff49db",
       orange: "#ff7849",
       green: "#13ce66",
@@ -78,6 +79,7 @@ module.exports = {
           },
           '@screen lg': {
             maxWidth: '1280px',
+            minWidth: 'auto',
           },
           '@screen xl': {
             maxWidth: '1280',

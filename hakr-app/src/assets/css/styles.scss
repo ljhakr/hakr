@@ -3,16 +3,17 @@
 @tailwind utilities;
 @import "variables";
 @import "animation";
-@import "buttons";
 @import "card";
 @import "modal";
 @import "router";
+@import "sidebar-nav";
 @import "toast";
 @import "typography";
 
 body {
-  padding: 0 10px;
-  @media only screen and (min-width: theme('screens.lg')) {
-    padding: 0 20px;
-  }
+  //padding: 0 10px;
+  //@media only screen and (min-width: theme('screens.lg')) {
+  //  padding: 0 20px;
+  //}
 }
+
