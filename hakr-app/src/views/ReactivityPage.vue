@@ -1,11 +1,13 @@
 <script setup>
+import ReactiveCounter from '@/components/ReactiveCounter';
 import PageHeading from '@/components/PageHeading.vue';
+
 </script>
 <template>
   <div class="container bg-white mb-10">
     <div class="mx-auto text-center">
-      <PageHeading :title="'VUE app with Tailwind'" :subTitle="'And Flowbite!'"></PageHeading>
-      <p>This is a showcase of Vue.js, Tailwind css & Flowbite</p>
+      <PageHeading :title="'VUE app with Tailwind'" :subTitle="'Reactivity'"></PageHeading>
+      <ReactiveCounter/>
     </div>
   </div>
 </template>

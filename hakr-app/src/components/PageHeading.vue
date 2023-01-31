@@ -3,6 +3,7 @@ import {defineProps} from 'vue';
 import TextBlock from "@/prototypes/TextBlock.vue";
 
 const props = defineProps({
+  class: { type: String },
   title: { type: String, default: 'This is a stub' },
   subTitle: { type: String, default: 'Sub title' },
 });

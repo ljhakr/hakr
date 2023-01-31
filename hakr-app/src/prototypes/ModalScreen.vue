@@ -7,16 +7,6 @@ const props = defineProps({
 
 const emits = defineEmits(['close']);
 
-function value (){
-  // On btn click the value will be true
-  console.log('ModalScreen modal value ' + props.show)
-}
-if (props.show) {
-  console.log("ModalScreen modal TRUE : true")
-} else {
-  // On btn click the value will be true
-  console.log("ModalScreen modal FALSE: false")
-}
 watch(props, async () => {
   if (props.show) {
     // On btn click the value will be false
@@ -42,7 +32,7 @@ watch(props, async () => {
               <slot name="footer">
                 <button
                     class="modal-default-button bg-blue-900 text-white py-2 px-3 rounded-md"
-                    @click="emits('close'); value()"
+                    @click="emits('close');"
                 >Close
                 </button>
               </slot>

@@ -9,7 +9,7 @@ const emits = defineEmits(['toggleDarkTheme']);
 </script>
 
 <template>
-  <button class="absolute right-4" @click="emits('toggleDarkTheme')">
+  <button class="float-right right-4" @click="emits('toggleDarkTheme')">
     <span class="text-gray-200" v-if="props.isDarkTheme">
       <font-awesome-icon class="fa-2x" :icon="['fas', 'fa-sun']" />
     </span>
