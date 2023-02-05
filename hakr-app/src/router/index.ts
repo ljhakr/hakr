@@ -38,10 +38,10 @@ const routes: Array<RouteRecordRaw> = [
         import("../views/TooltipsPage.vue"),
   },
   {
-    path: "/reactivity",
-    name: "reactivity",
+    path: "/reactive-button",
+    name: "reactive-button",
     component: () =>
-        import("../views/ReactivityPage.vue"),
+        import("../views/ReactiveButtonPage.vue"),
   },
   {
     path: "/toasts",
@@ -56,10 +56,10 @@ const routes: Array<RouteRecordRaw> = [
         import("../views/ModalPage.vue"),
   },
   {
-    path: "/book-counter",
-    name: "book-counter",
+    path: "/reactive-book-counter",
+    name: "reactive-book-counter",
     component: () =>
-        import("../views/BookCounter.vue"),
+        import("../views/ReactiveBookCounterPage.vue"),
   },
   {
     path: "/theme",

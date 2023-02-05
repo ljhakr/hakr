@@ -33,8 +33,13 @@ const items = [
   },
   {
     id: 5,
-    title: 'Reactivity',
-    url: '/reactivity',
+    title: 'Reactive-button',
+    url: '/reactive-button',
+  },
+  {
+    id: 8,
+    title: 'Reactive Book counter',
+    url: '/reactive-book-counter',
   },
   {
     id: 6,
@@ -45,11 +50,6 @@ const items = [
     id: 7,
     title: 'Modal',
     url: '/modal',
-  },
-  {
-    id: 8,
-    title: 'Book counter',
-    url: '/book-counter',
   },
   {
     id: 9,

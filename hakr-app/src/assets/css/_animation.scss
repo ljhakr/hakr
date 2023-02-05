@@ -5,3 +5,21 @@
 .animateMin {
   transition: .5s;
 }
+
+.kre-router-enter-active,
+.kre-router-leave-active {
+  transition: opacity .3s ease-in-out;
+}
+
+.kre-router-enter-from,
+.kre-router-leave-to {
+  opacity: 0;
+}
+
+.kre-reactive-button-enter-active {
+  transition: opacity 1s ease-in-out;
+}
+
+.kre-reactive-button-enter-from {
+  opacity: 0;
+}
