@@ -17,7 +17,7 @@ function closeToast() {
 <template>
   <div class="container bg-white mb-10">
     <div class="mx-auto text-center">
-      <PageHeading :textClass="'mb-20'" :title="'VUE app with Tailwind'" :subTitle="'Toasts'"></PageHeading>
+      <PageHeading :textClass="'mb-20'" :title="'Toasts'"></PageHeading>
       <div data-toast>
         <div class="rounded-xl mx-auto text-center py-8 bg-white dark:bg-blue-900">
           <div class="relative overflow-visible flex justify-center">

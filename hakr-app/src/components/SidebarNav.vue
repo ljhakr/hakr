@@ -48,13 +48,18 @@ const items = [
   },
   {
     id: 7,
-    title: 'Modal',
+    title: 'Vue modal',
     url: '/modal',
   },
   {
     id: 9,
     title: 'Theme',
     url: '/theme',
+  },
+  {
+    id: 10,
+    title: 'Transitions',
+    url: '/transitions',
   },
 ];
 </script>

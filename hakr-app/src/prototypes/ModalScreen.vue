@@ -18,11 +18,14 @@ watch(props, async () => {
 </script>
 <template>
   <Transition name="modal">
-    <div v-if="props.show" class="modal-mask fixed top-0 left-0 w-full h-full bg-black/50 table">
+    <div v-if="props.show" class="modal-mask fixed top-0 left-0 w-full h-full bg-black/70 table">
       <div class="modal-wrapper table-cell p-3">
-        <div class="modal-container w-full mx-auto p-3 bg-white rounded-sm shadow-md transition ease-in-out delay-50 duration-300">
-          <div class="modal-header">
-            <slot name="header">default header</slot>
+        <div class="overflow-y-auto md:max-h-screen-1/2 modal-container w-full mx-auto p-3 bg-white rounded-sm shadow-md transition ease-in-out delay-50 duration-300">
+          <div class="modal-header flex">
+            <div class="w-4/5">
+              <slot name="header">default header</slot>
+            </div>
+            <div @click="emits('close');" class="w-1/5 text-end" aria-label="Close modal">X</div>
           </div>
           <div class="modal-body">
             <slot name="body">default body</slot>

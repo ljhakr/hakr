@@ -20,6 +20,16 @@
   transition: opacity 1s ease-in-out;
 }
 
-.kre-reactive-button-enter-from {
+.kre-reactive-button-enter-from,
+.kre-reactive-button-leave-to {
+  opacity: 0;
+}
+
+.kre-transition-button-enter-active {
+  transition: opacity 1s ease-in-out;
+}
+
+.kre-transition-button-enter-from,
+.kre-transition-button-leave-to {
   opacity: 0;
 }

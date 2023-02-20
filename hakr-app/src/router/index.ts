@@ -67,6 +67,12 @@ const routes: Array<RouteRecordRaw> = [
     component: () =>
         import("../views/ThemePage.vue"),
   },
+  {
+    path: "/transitions",
+    name: "Transitions",
+    component: () =>
+        import("../views/TransitionsPage.vue"),
+  },
 ];
 
 const router = createRouter({
