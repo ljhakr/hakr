@@ -1,12 +1,16 @@
 <script setup lang="ts">
-import {defineProps} from 'vue';
-import TextBlock from "@/prototypes/TextBlock.vue";
+import {defineProps, withDefaults} from 'vue';
+import TextBlock from '@/prototypes/TextBlock.vue';
 
-const props = defineProps({
-  class: { type: String },
-  title: { type: String, default: 'This is a stub' },
-  subTitle: { type: String },
+export interface Props {
+  title?: string;
+  subTitle?: string;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  title: 'This is a stub',
 });
+
 </script>
 <template>
   <TextBlock :textClass="'mb-10'">

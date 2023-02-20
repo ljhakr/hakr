@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { defineProps } from "vue";
+import {defineProps} from 'vue';
 
-const props = defineProps( {
-  textClass: { type: String, required: false },
-});
+defineProps<{
+  textClass?: string
+}>();
 </script>
 <template>
-  <div :class="props.textClass">
+  <div :class="textClass">
     <slot></slot>
   </div>
 </template>

@@ -19,10 +19,10 @@ function subtraction() {
   <p>Amount of books: {{ state.count }}</p>
   <div class="sm:flex justify-center sm:gap-4 mb-2">
     <SingleButton @click="increment" :disabled="state.count === MAX_BOOKS"
-                  :class="'w-full sm:w-auto mb-3 sm:mb-0 bg-blue-900 hover:bg-blue-600'">Add a book!
+                  :buttonClass="'w-full sm:w-auto mb-3 sm:mb-0 bg-blue-900 hover:bg-blue-600'">Add a book!
     </SingleButton>
     <SingleButton @click="subtraction" :disabled="state.count === MIN_BOOKS"
-                  :class="'hover:bg-red-600 w-full sm:w-auto bg-red-900'">Delete a book
+                  :buttonClass="'hover:bg-red-600 w-full sm:w-auto bg-red-900'">Delete a book
     </SingleButton>
   </div>
 

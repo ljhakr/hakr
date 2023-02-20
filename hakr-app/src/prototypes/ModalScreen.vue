@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { defineEmits, defineProps, watch } from 'vue';
+import {defineEmits, defineProps, watch} from 'vue';
 
 const props = defineProps({
-  show: { type: Boolean, default: false, required: true },
+  show: {type: Boolean, default: false, required: true},
 });
 
 const emits = defineEmits(['close']);
@@ -10,9 +10,9 @@ const emits = defineEmits(['close']);
 watch(props, async () => {
   if (props.show) {
     // On btn click the value will be false
-    console.log('ModaModalScreenlProto modal watch props TRUE ' + props.show)
+    console.log('ModaModalScreenlProto modal watch props TRUE ' + props.show);
   } else {
-    console.log('ModalScreen modal watch props FALSE ' + props.show)
+    console.log('ModalScreen modal watch props FALSE ' + props.show);
   }
 });
 </script>
@@ -20,7 +20,8 @@ watch(props, async () => {
   <Transition name="modal">
     <div v-if="props.show" class="modal-mask fixed top-0 left-0 w-full h-full bg-black/70 table">
       <div class="modal-wrapper table-cell p-3">
-        <div class="overflow-y-auto md:max-h-screen-1/2 modal-container w-full mx-auto p-3 bg-white rounded-sm shadow-md transition ease-in-out delay-50 duration-300">
+        <div
+            class="overflow-y-auto md:max-h-screen-1/2 modal-container w-full mx-auto p-3 bg-white rounded-sm shadow-md transition ease-in-out delay-50 duration-300">
           <div class="modal-header flex">
             <div class="w-4/5">
               <slot name="header">default header</slot>

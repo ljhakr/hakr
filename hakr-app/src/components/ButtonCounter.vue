@@ -39,7 +39,7 @@ function animateCircleMin() {
 <template>
   <div class="sm:flex justify-center sm:gap-4">
     <SingleButton :disabled="count === MAX_BOOKS" @click="add(); animateCirclePlus()"
-                  :class="'w-full sm:w-auto mb-3 sm:mb-0 bg-blue-900'">Increase count
+                  :buttonClass="'w-full sm:w-auto mb-3 sm:mb-0 bg-blue-900'">Increase count
     </SingleButton>
     <div class="m-auto sm:mx-0 mb-3 md:mb-0 transition ease-in-out delay-150 hover:scale-110 duration-150 w-14 h-14
   rounded-full flex items-center justify-center border-2 border-blue-300 shadow-lg"
@@ -47,7 +47,7 @@ function animateCircleMin() {
       {{ count }}
     </div>
     <SingleButton :disabled="count === MIN_BOOKS" @click="subtract(); animateCircleMin()"
-                  :class="'w-full sm:w-auto bg-red-900'">Decrease count
+                  :buttonClass="'w-full sm:w-auto bg-red-900'">Decrease count
     </SingleButton>
   </div>
 </template>
