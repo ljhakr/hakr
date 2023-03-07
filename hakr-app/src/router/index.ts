@@ -8,12 +8,6 @@ const routes: Array<RouteRecordRaw> = [
     component: HomePage,
   },
   {
-    path: "/about",
-    name: "about",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutPage.vue"),
-  },
-  {
     path: "/cards",
     name: "cards",
     component: () =>
@@ -72,6 +66,12 @@ const routes: Array<RouteRecordRaw> = [
     name: "Transitions",
     component: () =>
         import("../views/TransitionsPage.vue"),
+  },
+  {
+    path: "/animations",
+    name: "Animations",
+    component: () =>
+        import("../views/AnimationsPage.vue"),
   },
 ];
 

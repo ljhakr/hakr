@@ -33,3 +33,17 @@
 .kre-transition-button-leave-to {
   opacity: 0;
 }
+
+.kre-movearea {
+  transition: 0.3s background-color ease;
+}
+
+.kre-list-enter-active,
+.kre-list-leave-active {
+  transition: all 0.5s ease;
+}
+.kre-list-enter-from,
+.kre-list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}

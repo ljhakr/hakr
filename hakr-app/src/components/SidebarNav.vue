@@ -21,14 +21,8 @@ const items = [
     icon: '3'
   },
   {
-    id: 3,
-    title: 'About',
-    url: '/about',
-    icon: '4'
-  },
-  {
     id: 4,
-    title: 'Tooltips',
+    title: 'Flowbite tooltips',
     url: '/tooltips',
   },
   {
@@ -43,7 +37,7 @@ const items = [
   },
   {
     id: 6,
-    title: 'Toasts',
+    title: 'Flowbite toasts',
     url: '/toasts',
   },
   {
@@ -60,6 +54,11 @@ const items = [
     id: 10,
     title: 'Transitions',
     url: '/transitions',
+  },
+  {
+    id: 11,
+    title: 'Animations',
+    url: '/animations',
   },
 ];
 </script>
