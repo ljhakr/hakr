@@ -36,6 +36,11 @@ const items = [
     url: '/reactive-book-counter',
   },
   {
+    id: 12,
+    title: 'Reactive Collapse',
+    url: '/reactive-collapse',
+  },
+  {
     id: 6,
     title: 'Flowbite toasts',
     url: '/toasts',

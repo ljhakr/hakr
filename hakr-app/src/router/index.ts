@@ -73,6 +73,12 @@ const routes: Array<RouteRecordRaw> = [
     component: () =>
         import("../views/AnimationsPage.vue"),
   },
+  {
+    path: "/reactive-collapse",
+    name: "Reactive collapde",
+    component: () =>
+        import("../views/ReactiveCollapsePage.vue"),
+  },
 ];
 
 const router = createRouter({
