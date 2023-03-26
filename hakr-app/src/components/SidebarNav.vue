@@ -22,7 +22,7 @@ const items = [
   },
   {
     id: 4,
-    title: 'Flowbite tooltips',
+    title: 'Tooltips',
     url: '/tooltips',
   },
   {
@@ -42,7 +42,7 @@ const items = [
   },
   {
     id: 6,
-    title: 'Flowbite toasts',
+    title: 'Toasts',
     url: '/toasts',
   },
   {
@@ -64,6 +64,11 @@ const items = [
     id: 11,
     title: 'Animations',
     url: '/animations',
+  },
+  {
+    id: 13,
+    title: 'DeCapitalizr',
+    url: '/decapitalizr',
   },
 ];
 </script>

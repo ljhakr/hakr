@@ -3,7 +3,6 @@ import App from "./App.vue";
 import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
-import 'flowbite/dist/flowbite';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import {library} from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/free-brands-svg-icons';

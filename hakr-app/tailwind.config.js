@@ -4,7 +4,6 @@ module.exports = {
   darkMode: 'class',
   content: [
     './src/**/*.{html,js,vue}',
-    './node_modules/flowbite/**/*.js',
   ],
   theme: {
     colors: {
@@ -72,7 +71,6 @@ module.exports = {
     container: true,
   },
   plugins: [
-    require('flowbite/plugin'),
 
     function({addComponents}) {
       addComponents({

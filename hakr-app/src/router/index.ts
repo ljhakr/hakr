@@ -79,6 +79,12 @@ const routes: Array<RouteRecordRaw> = [
     component: () =>
         import("../views/ReactiveCollapsePage.vue"),
   },
+  {
+    path: "/decapitalizr",
+    name: "DeCapitalizr",
+    component: () =>
+        import("../views/DeCapitalizrPage.vue"),
+  },
 ];
 
 const router = createRouter({
