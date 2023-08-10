@@ -1,0 +1,4 @@
+@use 'vuetify/settings' with (
+  $utilities: true,
+  $button-height: 40px,
+);

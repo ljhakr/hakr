@@ -8,6 +8,6 @@ import HorizontalRuler from '@/components/HorizontalRuler.vue';
       <PageHeading></PageHeading>
     </div>
     <HorizontalRuler></HorizontalRuler>
-    <p>Back to the <router-link to='/'>home page</router-link>.</p>
+    <p>Back to  <router-link to='/cards'>events overview</router-link>.</p>
   </div>
 </template>

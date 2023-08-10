@@ -13,9 +13,9 @@ const emits = defineEmits(['close']);
 </script>
 <template>
   <div v-if="props.show === 'success'" id="toast-success"
-       class="kre-toast absolute bottom-16 -top-20 flex items-center p-4 mb-2 w-full max-w-xs bg-white rounded-lg drop-shadow-lg shadow-red text-gray-800 dark:text-gray-300 dark:bg-gray-800"
+       class="kre-toast absolute bottom-16 -top-20 flex items-center p-4 mb-2 w-full max-w-xs bg-white rounded-lg drop-shadow-lg shadow-red text-gray-800"
        role="alert">
-    <div class="inline-flex flex-shrink-0 justify-center items-center w-8 h-8 text-green-500 rounded-lg XSdark:bg-green-800 Xdark:text-green-200">
+    <div class="inline-flex flex-shrink-0 justify-center items-center w-8 h-8 text-green-500 rounded-lg">
       <svg aria-hidden="true" class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20"
            xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd"
@@ -27,7 +27,7 @@ const emits = defineEmits(['close']);
     <div class="text-left ml-3 text-sm font-normal break-words">Success! Lorem ipsum success! Success, success & success!</div>
     <button type="button"
             @click="emits('close');"
-            class="inline-flex flex-shrink-0 justify-center ml-auto -mx-1.5 -my-1.5 bg-white text-gray-800 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-2 hover:bg-gray-100 h-8 w-8 dark:text-gray-200 dark:hover:text-white dark:bg-gray-500 dark:hover:bg-gray-700"
+            class="inline-flex flex-shrink-0 justify-center ml-auto -mx-1.5 -my-1.5 bg-white text-gray-800 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-2 hover:bg-gray-100 h-8 w-8"
             data-dismiss-target="#toast-success" aria-label="Close">
       <span class="sr-only">Close</span>
       <font-awesome-icon size="1x" :icon="['fas', 'fa-xmark']" />
@@ -35,10 +35,10 @@ const emits = defineEmits(['close']);
   </div>
 
   <div v-if="props.show === 'danger'" id="toast-danger"
-       class="kre-toast absolute flex items-center p-4 mb-2 w-full max-w-xs bg-white rounded-lg drop-shadow-lg shadow-red text-gray-800 dark:text-gray-300 dark:bg-gray-800"
+       class="kre-toast absolute flex items-center p-4 mb-2 w-full max-w-xs bg-white rounded-lg drop-shadow-lg shadow-red text-gray-800"
        role="alert">
     <div
-        class="inline-flex flex-shrink-0 justify-center items-center w-8 h-8 text-red-500 bg-red-100 rounded-lg dark:bg-red-800 dark:text-red-200">
+        class="inline-flex flex-shrink-0 justify-center items-center w-8 h-8 text-red-500 bg-red-100 rounded-lg">
       <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
            xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd"
@@ -50,7 +50,7 @@ const emits = defineEmits(['close']);
     <div class="text-left ml-3 text-sm font-normal break-words">Danger!</div>
     <button type="button"
             @click="emits('close');"
-            class="inline-flex flex-shrink-0 justify-center ml-auto -mx-1.5 -my-1.5 bg-white text-gray-800 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-2 hover:bg-gray-100 h-8 w-8 dark:text-gray-200 dark:hover:text-white dark:bg-gray-500 dark:hover:bg-gray-700"
+            class="inline-flex flex-shrink-0 justify-center ml-auto -mx-1.5 -my-1.5 bg-white text-gray-800 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-2 hover:bg-gray-100 h-8 w-8"
             data-dismiss-target="#toast-success" aria-label="Close">
       <span class="sr-only">Close</span>
       <font-awesome-icon size="1x" :icon="['fas', 'fa-xmark']" />
@@ -58,10 +58,10 @@ const emits = defineEmits(['close']);
   </div>
 
   <div v-if="props.show === 'warning'" id="toast-warning"
-       class="kre-toast absolute flex items-center p-4 mb-2 w-full max-w-xs bg-white rounded-lg drop-shadow-lg shadow-red text-gray-800 dark:text-gray-300 dark:bg-gray-800"
+       class="kre-toast absolute flex items-center p-4 mb-2 w-full max-w-xs bg-white rounded-lg drop-shadow-lg shadow-red text-gray-800"
        role="alert">
     <div
-        class="inline-flex flex-shrink-0 justify-center items-center w-8 h-8 text-orange-400 bg-orange-100 rounded-lg dark:bg-orange-700 dark:text-orange-200">
+        class="inline-flex flex-shrink-0 justify-center items-center w-8 h-8 text-orange-400 bg-orange-100 rounded-lg">
       <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
            xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd"
@@ -73,7 +73,7 @@ const emits = defineEmits(['close']);
     <div class="text-left ml-3 text-sm font-normal break-words">Warning!</div>
     <button type="button"
             @click="emits('close');"
-            class="inline-flex flex-shrink-0 justify-center ml-auto -mx-1.5 -my-1.5 bg-white text-gray-800 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-2 hover:bg-gray-100 h-8 w-8 dark:text-gray-200 dark:hover:text-white dark:bg-gray-500 dark:hover:bg-gray-700"
+            class="inline-flex flex-shrink-0 justify-center ml-auto -mx-1.5 -my-1.5 bg-white text-gray-800 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-2 hover:bg-gray-100 h-8 w-8"
             data-dismiss-target="#toast-success" aria-label="Close">
       <span class="sr-only">Close</span>
       <font-awesome-icon size="1x" :icon="['fas', 'fa-xmark']" />

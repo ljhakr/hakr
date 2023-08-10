@@ -1,6 +1,8 @@
 <template>
   <v-main>
-    <router-view />
+    <transition name="kre-router">
+      <router-view/>
+    </Transition>
   </v-main>
 </template>
 

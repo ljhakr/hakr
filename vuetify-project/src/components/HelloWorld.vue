@@ -1,17 +1,18 @@
 <template>
   <v-container class="fill-height">
-    <v-responsive class="d-flex align-center text-center fill-height">
-      <v-img
-        contain
-        height="300"
-        src="@/assets/logo.svg"
-      />
-
-      <div class="text-body-2 font-weight-light mb-n1">Welcome to</div>
-
-      <h1 class="text-h2 font-weight-bold">Vuetify</h1>
-
-      <div class="py-14" />
+    <v-responsive class="d-flex align-centerX text-center fill-height">
+      <div class="d-flex justify-center align-content-center">
+        <div>
+          <v-img
+            contain
+            height="auto"
+            width="30"
+            src="@/assets/logo.svg"
+          />
+        </div>
+        <div class="align-self-center text-body-2 font-weight-light">Welcome to</div>
+      </div>
+      <h1 class="text-h2 font-weight-bold mb-6">Vuetify</h1>
 
       <v-row class="d-flex align-center justify-center">
         <v-col cols="auto">
@@ -27,7 +28,6 @@
               size="large"
               start
             />
-
             Components
           </v-btn>
         </v-col>
@@ -75,5 +75,5 @@
 </template>
 
 <script setup lang="ts">
-  //
+//
 </script>

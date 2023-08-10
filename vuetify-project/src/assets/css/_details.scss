@@ -1,0 +1,18 @@
+summary {
+  display: block;
+}
+
+summary::after {
+  content: '\203A'; /* chevron */
+  display: inline-block;
+  font-size: 28px;
+  margin-left: 6px;
+  position: relative;
+  top: .2em;
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+
+details[open] summary::after {
+  transform: rotate(-90deg);
+}

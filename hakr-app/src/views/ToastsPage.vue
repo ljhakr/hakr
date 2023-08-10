@@ -19,15 +19,15 @@ function closeToast() {
     <div class="mx-auto text-center">
       <PageHeading :textClass="'mb-20'" :title="'Toasts'"></PageHeading>
       <div data-toast>
-        <div class="rounded-xl mx-auto text-center py-8 bg-white dark:bg-blue-900">
+        <div class="rounded-xl mx-auto text-center py-8 bg-white">
           <div class="relative overflow-visible flex justify-center">
-            <a href="#" class="relative underline underline-offset-2 inline-block text-blue-900 dark:text-white"
+            <a href="#" class="relative underline underline-offset-2 inline-block text-blue-900"
                @click="openToast('success')">Success message</a>
             <a href="#"
-               class="sm:border-l-2 border-blue-300 pl-2 ml-2 relative underline underline-offset-2 inline-block text-blue-900 dark:text-white"
+               class="sm:border-l-2 border-blue-300 pl-2 ml-2 relative underline underline-offset-2 inline-block text-blue-900"
                @click="openToast('danger')">Danger message</a>
             <a href="#"
-               class="sm:border-l-2 border-blue-300 pl-2 ml-2 relative underline underline-offset-2 inline-block text-blue-900 dark:text-white"
+               class="sm:border-l-2 border-blue-300 pl-2 ml-2 relative underline underline-offset-2 inline-block text-blue-900"
                @click="openToast('warning')">Warning message</a>
             <ThemeToggle :isDarkTheme="isDarkTheme" @toggleDarkTheme="toggleTheme"></ThemeToggle>
             <transition name="kre-toast">
