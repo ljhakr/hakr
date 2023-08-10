@@ -37,8 +37,8 @@ const items = [
   },
   {
     id: 12,
-    title: 'Reactive Collapse',
-    url: '/reactive-collapse',
+    title: 'Reactive Show & Hide',
+    url: '/reactive-show-hide',
   },
   {
     id: 6,

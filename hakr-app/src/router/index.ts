@@ -75,9 +75,9 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/reactive-collapse",
-    name: "Reactive collapde",
+    name: "Reactive show & hide",
     component: () =>
-        import("../views/ReactiveCollapsePage.vue"),
+        import("../views/ReactiveShowHidePage.vue"),
   },
   {
     path: "/decapitalizr",

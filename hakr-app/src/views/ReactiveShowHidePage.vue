@@ -1,15 +1,15 @@
 <script setup>
 import PageHeading from '@/components/PageHeading.vue';
-import ReactiveCollapse from '@/components/ReactiveCollapse.vue';
+import ReactiveShowHide from '@/components/ReactiveShowHide.vue';
 </script>
 
 <template>
   <div class="container bg-white mb-10">
     <div class="mx-auto text-center">
-      <PageHeading :title="'Reactive collapse'"></PageHeading>
+      <PageHeading :title="'Reactive show & hide'"></PageHeading>
       <div class="columns-1">
         <div class="w-full text-center mb-8">
-          <ReactiveCollapse></ReactiveCollapse>
+          <ReactiveShowHide></ReactiveShowHide>
         </div>
       </div>
     </div>
