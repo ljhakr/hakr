@@ -33,7 +33,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/reactive-button",
-    name: "reactive-button",
+    name: "ref-and-template-ref",
     component: () =>
         import("../views/ReactiveButtonPage.vue"),
   },
@@ -84,6 +84,18 @@ const routes: Array<RouteRecordRaw> = [
     name: "DeCapitalizr",
     component: () =>
         import("../views/DeCapitalizrPage.vue"),
+  },
+  {
+    path: "/shopping",
+    name: "Shopping",
+    component: () =>
+        import("../views/ShoppingPage.vue"),
+  },
+  {
+    path: "/form",
+    name: "Form",
+    component: () =>
+        import("../views/ExampleForm.vue"),
   },
 ];
 

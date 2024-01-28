@@ -27,7 +27,7 @@ const items = [
   },
   {
     id: 5,
-    title: 'Reactive-button',
+    title: 'Ref and Template ref',
     url: '/reactive-button',
   },
   {
@@ -69,6 +69,16 @@ const items = [
     id: 13,
     title: 'DeCapitalizr',
     url: '/decapitalizr',
+  },
+  {
+    id: 14,
+    title: 'Shopping',
+    url: '/shopping',
+  },
+  {
+    id: 14,
+    title: 'Form',
+    url: '/form',
   },
 ];
 </script>
