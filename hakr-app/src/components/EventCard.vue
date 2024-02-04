@@ -15,6 +15,13 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const done = ref(false);
+
+const triggerConsoleLog = () => {
+  return console.log(
+      // second parameter can be an object too
+      'Link clicked: ', props.url,
+  )
+}
 </script>
 <template>
   <SingleCard :cardClass="'border border-blue-900'">
@@ -26,7 +33,7 @@ const done = ref(false);
     </template>
     <div class="relative group hover:bg-blue-900 p-5 my-3 rounded-lg">
       <h2>
-        <router-link :to="props.url" class="after:absolute after:inset-0 group-hover:text-white">{{
+        <router-link @click="triggerConsoleLog" :to="props.url" class="after:absolute after:inset-0 group-hover:text-white">{{
             props.title
           }}
         </router-link>

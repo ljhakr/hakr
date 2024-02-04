@@ -16,7 +16,7 @@ const items = [
   },
   {
     id: 2,
-    title: 'Cards',
+    title: 'Cards / slot / router link / console log',
     url: '/cards',
     icon: '3'
   },
@@ -76,9 +76,14 @@ const items = [
     url: '/shopping',
   },
   {
-    id: 14,
+    id: 15,
     title: 'Form',
     url: '/form',
+  },
+  {
+    id: 16,
+    title: 'Emoji',
+    url: '/emoji',
   },
 ];
 </script>

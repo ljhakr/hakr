@@ -13,7 +13,6 @@ onMounted(() => {
   })
 })
 
-
 function count() {
   obj.value.count++;
 }

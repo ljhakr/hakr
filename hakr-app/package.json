@@ -15,6 +15,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@fortawesome/vue-fontawesome": "^3.0.2",
+    "@joeattardi/emoji-button": "^4.6.4",
     "core-js": "^3.8.3",
     "gsap": "^3.11.4",
     "register-service-worker": "^1.7.2",

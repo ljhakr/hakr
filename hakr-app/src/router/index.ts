@@ -97,6 +97,12 @@ const routes: Array<RouteRecordRaw> = [
     component: () =>
         import("../views/ExampleForm.vue"),
   },
+  {
+    path: "/emoji",
+    name: "Emoji",
+    component: () =>
+        import("../views/EmojiPicker.vue"),
+  },
 ];
 
 const router = createRouter({
