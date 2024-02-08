@@ -82,6 +82,11 @@ const items = [
   },
   {
     id: 16,
+    title: 'Vee-validate form',
+    url: '/vee-form',
+  },
+  {
+    id: 17,
     title: 'Emoji',
     url: '/emoji',
   },

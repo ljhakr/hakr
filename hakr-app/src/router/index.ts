@@ -98,6 +98,12 @@ const routes: Array<RouteRecordRaw> = [
         import("../views/ExampleForm.vue"),
   },
   {
+    path: "/vee-form",
+    name: "Vee-validate form",
+    component: () =>
+        import("../views/VeeValidateForm.vue"),
+  },
+  {
     path: "/emoji",
     name: "Emoji",
     component: () =>
