@@ -9,12 +9,16 @@ import SidebarNav from '@/components/SidebarNav.vue';
       </nav>
     </div>
     <div class="md:flex">
-        <SidebarNav/>
-        <div class="w-full px-3 md:px-6">
+      <SidebarNav/>
+      <div class="w-full px-3 md:px-6">
+        <router-view v-slot="{ Component }">
           <transition name="kre-router">
-            <router-view/>
-          </Transition>
-        </div>
+            <div>
+              <component :is="Component"/>
+            </div>
+          </transition>
+        </router-view>
       </div>
+    </div>
   </div>
 </template>

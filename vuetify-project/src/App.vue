@@ -12,9 +12,13 @@ import SidebarNav from '@/components/SidebarNav.vue';
       </v-col>
       <v-col class="v-col-9 bg-deep-purple-lighten-2">
         <div class="">
-          <transition name="kre-router">
-            <router-view/>
-          </Transition>
+          <router-view v-slot="{ Component }">
+            <transition name="kre-router">
+              <div>
+                <component :is="Component"/>
+              </div>
+            </transition>
+          </router-view>
         </div>
       </v-col>
     </v-row>

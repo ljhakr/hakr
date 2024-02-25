@@ -2,7 +2,7 @@
 import {defineProps} from 'vue';
 
 defineProps <{
-  icon: string
+  icon?: string
   title: string
   url: string
 }>()
