@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-import {Form as VeeForm, Field as VeeField, ErrorMessage} from 'vee-validate';
+import {Form as VeeForm, Field as VeeField, InputType,  ErrorMessage} from 'vee-validate';
 
+import validateCheckbox from "@/validation/vee-validate/checkbox";
 import validateEmail from "@/validation/vee-validate/email";
 import validateText from "@/validation/vee-validate/text";
 import {ref} from "vue";
@@ -10,12 +11,21 @@ const submit = (values)=>{
   console.log('Submitted values: ', JSON.stringify(values, null, 2));
 }
 
+const checkboxInput = ref('')
 const textInput = ref("")
 const emailInput = ref("")
 </script>
 
 <template>
   <VeeForm @submit.prevent="submit">
+    <div class="mb-2">
+      <label for="acceptTerms">
+        <VeeField v-model="checkboxInput" id="acceptTerms" name="acceptTerms" type="checkbox" class="" :rules="validateCheckbox" />
+        Accept our terms
+      </label>
+      <p class="text-muted">{{ checkboxInput }}</p>
+      <div><ErrorMessage name="acceptTerms"/></div>
+    </div>
     <div class="mb-2">
       <VeeField v-model="textInput" name="name" class="border border-blue p-3 rounded-sm" :rules="validateText" placeholder="Your name" />
       <p class="text-muted">{{ textInput }}</p>
