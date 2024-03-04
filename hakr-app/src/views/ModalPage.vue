@@ -8,16 +8,47 @@ const modal = ref(false);
 
 function openModal() {
   modal.value = true;
-  scrollPrevent();
+  disable()
+  //scrollPrevent();
 }
 
 function closeModal() {
   modal.value = false;
-  scrollPrevent();
+  enable()
+  //scrollPrevent();
 }
 
+
+//https://alvarotrigo.com/blog/prevent-scroll-on-scrollable-element-js/
+// https://stackoverflow.com/questions/55548261/unable-to-preventdefault-inside-passive-event-listener-due-to-target-being-treat
+function preventScroll(e){
+  e.preventDefault();
+  e.stopPropagation();
+
+  return false;
+}
+
+const html = document.querySelector('html');
 const body = document.querySelector('body');
+function disable(){
+  html?.addEventListener('wheel', preventScroll, {passive:false});
+  html?.classList.toggle('kre-modal');
+  scrollPrevent()
+}
+
+function enable(){
+  setTimeout(() => {
+    html?.removeEventListener('wheel', preventScroll);
+    html?.classList.toggle('kre-modal');
+    scrollPrevent()
+  }, 200)
+}
+
+
+
+
 function scrollPrevent() {
+  //styles seem to have no influence on scrolling in Safari
   body?.classList.toggle('overflow-y-hidden');
 }
 </script>
